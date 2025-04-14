@@ -5,7 +5,7 @@ export function Animation() {
   return (
     <LottieView
       style={{width: 400, height: 400}}
-      source={require('./prime-banner-bg-dark.json')}
+      source={require('./data.json')}
       autoPlay
       loop
     />

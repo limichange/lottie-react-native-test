@@ -4,18 +4,15 @@
  *
  * @format
  */
-
+import { WebView } from 'react-native-webview';
 import React from 'react';
 import {
   SafeAreaView,
   ScrollView,
-  Text,
   useColorScheme,
-  View,
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {Animation} from './Animation';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() !== 'dark';
@@ -29,14 +26,13 @@ function App(): React.JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Text>Animation</Text>
-          <Animation />
-          <Text>Animation</Text>
-        </View>
+          <WebView
+           allowFileAccess
+          allowFileAccessFromFileURLs
+          allowUniversalAccessFromFileURLs
+            source={{ uri: 'https://www.tradingview.com/chart/' }}
+            style={{ height: 800, width: '100%' }}
+          />
       </ScrollView>
     </SafeAreaView>
   );
