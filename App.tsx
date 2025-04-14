@@ -27,10 +27,7 @@ function App(): React.JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
           <WebView
-           allowFileAccess
-          allowFileAccessFromFileURLs
-          allowUniversalAccessFromFileURLs
-            source={{ uri: 'https://www.tradingview.com/chart/' }}
+            source={{ uri: 'https://tradingview.onekeytest.com/?k=19' }}
             style={{ height: 800, width: '100%' }}
           />
       </ScrollView>
